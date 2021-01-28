@@ -1,0 +1,8 @@
+#spring-boot项目主配置
+spring:
+  profiles:
+    #配置当前环境 dev为开发环境
+    active: dev
+  application:
+    #项目名
+    name: project-template
