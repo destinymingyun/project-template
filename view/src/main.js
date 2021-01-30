@@ -1,4 +1,9 @@
 /**
  * 前端程序入口
  **/
-console.log("xingchen-project-template");
+import Vue from "vue";
+import App from "./App.vue";
+
+new Vue({
+    render: h => h(App),
+}).$mount("#app");

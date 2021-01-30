@@ -4,6 +4,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
     //  设置开发/生产模式
@@ -17,6 +18,16 @@ module.exports = {
         //  文件名
         filename: "[main].[contenthash].js",
     },
+    //  文件解析
+    module: {
+        rules: [
+            // ... vue
+            {
+                test: /\.vue$/,
+                loader: "vue-loader",
+            },
+        ]
+    },
     //  插件
     plugins: [
         //  html模板插件
@@ -26,6 +37,8 @@ module.exports = {
         }),
         //  dist文件夹缓存清除
         new CleanWebpackPlugin(),
+        //  vue-单文件解析
+        new VueLoaderPlugin(),
     ],
     //  简易开发服务器
     devServer: {
@@ -49,5 +62,5 @@ module.exports = {
         alias: {
 
         }
-    }
+    },
 };
