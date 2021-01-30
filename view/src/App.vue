@@ -10,5 +10,8 @@
     };
 </script>
 
-<style scoped>
+<style scoped lang="less">
+    .App {
+        height: 100%;
+    }
 </style>

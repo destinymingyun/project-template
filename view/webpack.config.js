@@ -26,6 +26,15 @@ module.exports = {
                 test: /\.vue$/,
                 loader: "vue-loader",
             },
+            //  less文件
+            {
+                test: /\.less$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "less-loader",
+                ],
+            },
         ]
     },
     //  插件
@@ -60,7 +69,7 @@ module.exports = {
     resolve: {
         //  别名配置
         alias: {
-
+            "__style__": path.resolve(__dirname, "res/less"),
         }
     },
 };
