@@ -70,6 +70,9 @@ module.exports = {
         //  别名配置
         alias: {
             "__style__": path.resolve(__dirname, "res/less"),
+            "__tpage__": path.resolve(__dirname, "src/t-page"),
+            "__router__":path.resolve(__dirname, "src/router"),
+
         }
     },
 };

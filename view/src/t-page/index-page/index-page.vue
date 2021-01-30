@@ -1,17 +1,17 @@
 <template>
-    <div class="App">
-        <router-view></router-view>
+    <div class="index-page">
+        index-page组件
     </div>
 </template>
 
 <script>
     export default {
-        name: "App",
+        name: "index-page",
     };
 </script>
 
 <style scoped lang="less">
-    .App {
-        height: 100%;
+    .index-page {
+
     }
 </style>
