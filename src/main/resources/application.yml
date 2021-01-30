@@ -6,3 +6,11 @@ spring:
   application:
     #项目名
     name: project-template
+
+#mybatis配置
+mybatis:
+  # xml存放路径
+  mapper-locations: classpath:mapper/**/*-mapper.xml
+  configuration:
+    #开启驼峰命名转换
+    map-underscore-to-camel-case: true

@@ -2,3 +2,16 @@
 #开发服务器配置
 server:
   port: 25560
+
+#spring开发环境
+spring:
+  #开发数据库连接配置
+  datasource:
+    #url
+    url: jdbc:mysql://192.168.1.4:3306/dev?serverTimezone=Asia/Shanghai
+    #名字
+    username: root
+    #密码
+    password: 970106
+    #连接驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver

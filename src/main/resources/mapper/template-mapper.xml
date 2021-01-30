@@ -1,0 +1,8 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingchenproject.template.projecttemplate.mapper.TestMapper">
+    <insert id="postTest" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `test` (`test_msg`)
+        VALUES (#{testMsg});
+    </insert>
+</mapper>
