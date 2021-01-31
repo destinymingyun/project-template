@@ -1,0 +1,18 @@
+/**
+  边框样式
+ */
+// 细边框灰
+.border-light-gray {
+  border: #dcdee2 solid 0.5px;
+}
+
+//  边界阴影灰
+.border-shadow-gray {
+  box-shadow: 3px 3px 3px #dcdee2;
+}
+
+//  细灰边框带悬停灰阴影
+.border-shadow-hover-gray {
+  &:hover:extend(.border-shadow-gray) {
+  }
+}

@@ -71,7 +71,8 @@ module.exports = {
         alias: {
             "__style__": path.resolve(__dirname, "res/less"),
             "__tpage__": path.resolve(__dirname, "src/t-page"),
-            "__router__":path.resolve(__dirname, "src/router"),
+            "__router__": path.resolve(__dirname, "src/router"),
+            "__tcomponent__": path.resolve(__dirname, "src/t-component"),
 
         }
     },
