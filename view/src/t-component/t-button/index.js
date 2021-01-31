@@ -6,5 +6,5 @@
  * type： 对外透明，对应原生button的type类型
  *
  **/
-import tButton from "./t-button.vue";
-export default tButton;
+import TButton from "./t-button.vue";
+export default TButton;

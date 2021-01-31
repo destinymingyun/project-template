@@ -73,7 +73,8 @@ module.exports = {
             "__tpage__": path.resolve(__dirname, "src/t-page"),
             "__router__": path.resolve(__dirname, "src/router"),
             "__tcomponent__": path.resolve(__dirname, "src/t-component"),
-
+            "__model__": path.resolve(__dirname, "src/model"),
+            "__service__": path.resolve(__dirname, "src/service"),
         }
     },
 };

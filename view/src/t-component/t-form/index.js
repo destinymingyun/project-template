@@ -1,7 +1,7 @@
 /**
  * form表单
  **/
-import tForm from "./t-form.vue";
-import tFormItem from "./t-form-item";
+import TForm from "./t-form.vue";
+import TFormItem from "./t-form-item";
 
-export {tForm, tFormItem};
+export {TForm, TFormItem};

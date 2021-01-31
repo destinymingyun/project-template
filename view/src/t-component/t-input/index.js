@@ -7,6 +7,6 @@
  * password：若为填写此字段则输入框类型变为password
  * long: 独占一行
  **/
-import tInput from "./t-input.vue";
+import TInput from "./t-input.vue";
 
-export default tInput;
+export default TInput;

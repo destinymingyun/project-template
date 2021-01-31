@@ -1,5 +1,5 @@
 /**
  * 默认主页
  **/
-import indexPage from "./index-page.vue";
-export default indexPage;
+import IndexPage from "./index-page.vue";
+export default IndexPage;

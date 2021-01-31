@@ -5,7 +5,7 @@ const route = [
     //  默认页面
     {
         path: "/",
-        redirect: "/test",
+        redirect: "/loginAndRegister",
     },
     //  index
     {
@@ -15,8 +15,13 @@ const route = [
     //  test页面
     {
         path: "/test",
-        component: ()=> import("__tpage__/test-page"),
-    } ,
+        component: () => import("__tpage__/test-page"),
+    },
+    //  登录注册页面
+    {
+        path: "/loginAndRegister",
+        component: () => import("__tpage__/login-and-register-page"),
+    },
 ];
 
 export default route;

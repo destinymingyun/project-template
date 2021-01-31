@@ -9,7 +9,7 @@
 <script>
     export default {
         name: "t-form",
-        computed: {
+        methods: {
             /**
              * 对外透原生表单submit事件
              */
@@ -20,7 +20,7 @@
              * 对外透明reset原生表单reset事件
              */
             resetForm() {
-              this.$emit("reset");
+                this.$emit("reset");
             }
         }
     };

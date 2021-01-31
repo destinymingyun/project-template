@@ -1,6 +1,6 @@
 <template>
     <div class="t-button">
-        <button :class="[modelType, isLong]" :long="long" :type="type">
+        <button :class="[modelType, isLong]" :long="long" :type="type" :mode="mode">
             <slot></slot>
         </button>
     </div>
