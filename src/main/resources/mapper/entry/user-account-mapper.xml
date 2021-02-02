@@ -1,0 +1,13 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingchenproject.template.projecttemplate.mapper.UserAccountMapper">
+    <insert id="postUserAccount" useGeneratedKeys="true" keyProperty="userId">
+        INSERT INTO `user_account` (`account`, `password`)
+        VALUES (#{account}, #{password});
+    </insert>
+    <select id="getUserAccountByAccount" resultType="com.xingchenproject.template.projecttemplate.model.po.UserAccount">
+        SELECT *
+        FROM `user_account`
+        Where `account` = #{account};
+    </select>
+</mapper>

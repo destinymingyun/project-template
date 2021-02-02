@@ -1,0 +1,14 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingchenproject.template.projecttemplate.mapper.PowerMapper">
+    <insert id="postPower" useGeneratedKeys="true" keyProperty="powerId">
+        INSERT INTO `power` (`power_name`, `power_desc`)
+        VALUES (#{powerName}, #{powerDesc});
+    </insert>
+
+    <select id="getPowerByPowerId" resultType="com.xingchenproject.template.projecttemplate.model.po.Power">
+        SELECT *
+        FROM `power`
+        WHERE `power_id` = #{powerId};
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingchenproject.template.projecttemplate.mapper.RoleNameMapper">
+    <insert id="postRole" useGeneratedKeys="true" keyProperty="roleId">
+        INSERT INTO `role` (`role_name`, `role_desc`)
+        VALUES (#{roleName}, #{roleDesc});
+    </insert>
+
+    <select id="getRoleByRoleId" resultType="com.xingchenproject.template.projecttemplate.model.po.RoleName">
+        SELECT *
+        FROM `role`
+        WHERE `role_id` = #{roleOId};
+    </select>
+</mapper>
