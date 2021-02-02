@@ -1,7 +1,10 @@
 package com.xingchenproject.template.projecttemplate.security;
 
+import com.xingchenproject.template.projecttemplate.model.bo.UserDetailsImpl;
+import com.xingchenproject.template.projecttemplate.model.po.UserAccount;
 import com.xingchenproject.template.projecttemplate.model.vo.ResponseData;
 import com.xingchenproject.template.projecttemplate.protocol.ResponseCode;
+import com.xingchenproject.template.projecttemplate.util.JwtTokenUtil;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -18,7 +21,11 @@ import java.io.IOException;
 public class AjaxAuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        UserAccount userAccount = userDetails.getUserAccount();
+        System.out.println(userAccount.getPassword());
         ResponseData responseData = ResponseData.builder()
+                .token(JwtTokenUtil.createToken(userAccount.getAccount()))
                 .code(ResponseCode.SUCCESS)
                 .msg(ResponseCode.SUCCESS_NAME)
                 .build();

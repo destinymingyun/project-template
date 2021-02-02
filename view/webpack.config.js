@@ -58,7 +58,7 @@ module.exports = {
         //  代理(解决跨域)
         proxy: {
             "/api": {
-                target: "http://localhost:10000",
+                target: "http://localhost:25560",
             }
         },
         port: 25565,

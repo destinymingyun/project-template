@@ -6,7 +6,7 @@ import Axios from "axios";
 
 class AccountServiceImpl extends AccountService{
     login(userAccount) {
-        const url = "/api/login";
+        const url = "/api/user/login";
         return Axios.post(url, userAccount.toFormData());
     }
 }
