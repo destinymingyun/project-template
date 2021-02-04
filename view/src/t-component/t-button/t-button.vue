@@ -7,6 +7,7 @@
 </template>
 
 <script>
+    import Mode from "__protocol__/Mode";
     export default {
         name: "t-button",
         props: {
@@ -33,17 +34,17 @@
              */
             modelType() {
                 switch (this.mode) {
-                    case "success":
+                    case Mode.SUCCESS:
                         return ["success-active-dark", "success-hover-light"];
-                    case "warning":
+                    case Mode.WARNING:
                         return ["warning-active-dark", "warning-hover-light"];
-                    case "error":
+                    case Mode.ERROR:
                         return ["error-active-dark", "error-hover-light"];
-                    case "primary":
+                    case Mode.PRIMARY:
                         return ["primary-active-dark", "primary-hover-light"];
-                    case "info":
+                    case Mode.INFO:
                         return ["info-active-dark", "info-hover-light"];
-                    case "cancel":
+                    case Mode.CANCEL:
                         return ["cancel-active-dark", "cancel-hover-light"];
                     default:
                         return "";

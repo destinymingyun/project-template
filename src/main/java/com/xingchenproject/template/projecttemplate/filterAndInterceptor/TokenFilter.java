@@ -15,8 +15,14 @@ import java.io.IOException;
 @Component
 public class TokenFilter extends OncePerRequestFilter {
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
         System.out.println("tokenFilter");
+        String token = request.getHeader("token");
+        System.out.println("token = " + token);
+        if(token != null) {
+            System.out.println("token = " + token);
+        }
         filterChain.doFilter(request, response);
     }
 }

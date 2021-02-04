@@ -1,5 +1,6 @@
 <template>
     <div class="test-page">
+        {{this.$store.getters.getToken}}
         <t-input placeholder="inputTest" long></t-input>
         <t-button mode="success" long>按钮</t-button>
         <t-card>

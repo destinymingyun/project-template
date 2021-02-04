@@ -1,10 +1,7 @@
 <template>
     <div class="t-input">
-        <input :class="[isLong]" :type="isPassword" :value="value" v-on="inputListeners" :placeholder="placeholder"
-               :name="name" :mode="mode" :long="long"/>
-        <div>
-            
-        </div>
+        <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name"
+               :placeholder="placeholder" :type="isPassword" :value="value"/>
     </div>
 </template>
 

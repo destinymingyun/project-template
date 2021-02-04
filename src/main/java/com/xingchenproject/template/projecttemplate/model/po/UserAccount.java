@@ -1,5 +1,6 @@
 package com.xingchenproject.template.projecttemplate.model.po;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 /**
@@ -15,4 +16,11 @@ public class UserAccount {
     private String password;
     //  用户状态，true为激活，false为未激活
     private boolean status;
+
+    @Override
+    public String toString() {
+        JSONObject json = new JSONObject();
+        json.put("userAccount", this);
+        return json.toJSONString();
+    }
 }

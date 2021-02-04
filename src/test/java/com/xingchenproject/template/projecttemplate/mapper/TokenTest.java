@@ -20,7 +20,8 @@ public class TokenTest {
     public void tokenTest() {
         UserDetailsImpl userDetails = new UserDetailsImpl();
         UserAccount userAccount = new UserAccount();
-        String token = JwtTokenUtil.createToken("test");
+        userAccount.setAccount("test");
+        String token = JwtTokenUtil.createToken(userAccount);
         System.out.println("token = " + token);
         Claims claims = JwtTokenUtil.parseJWT(token);
         System.out.println("claims = " + claims);

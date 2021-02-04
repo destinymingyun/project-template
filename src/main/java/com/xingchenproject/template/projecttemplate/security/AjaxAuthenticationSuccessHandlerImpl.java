@@ -23,9 +23,8 @@ public class AjaxAuthenticationSuccessHandlerImpl implements AuthenticationSucce
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         UserAccount userAccount = userDetails.getUserAccount();
-        System.out.println(userAccount.getPassword());
         ResponseData responseData = ResponseData.builder()
-                .token(JwtTokenUtil.createToken(userAccount.getAccount()))
+                .token(JwtTokenUtil.createToken(userAccount))
                 .code(ResponseCode.SUCCESS)
                 .msg(ResponseCode.SUCCESS_NAME)
                 .build();

@@ -1,5 +1,6 @@
 package com.xingchenproject.template.projecttemplate.util;
 
+import com.xingchenproject.template.projecttemplate.model.po.UserAccount;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -16,14 +17,14 @@ public class JwtTokenUtil {
     public final int overTime = 60*60*24;
     /**
      * 创建token
-     * @param account 用户帐户
+     * @param userAccount 用户帐户
      * @return 返回该用户信息
      */
-    public static String createToken(String account) {
+    public static String createToken(UserAccount userAccount) {
         JwtBuilder builder = Jwts.builder()
                 .setId(JWT_ID)
                 .setIssuedAt(new Date())
-                .setSubject(account)
+                .setSubject(userAccount.toString())
                 .signWith(SignatureAlgorithm.HS256, KEY);
         return builder.compact();
     }

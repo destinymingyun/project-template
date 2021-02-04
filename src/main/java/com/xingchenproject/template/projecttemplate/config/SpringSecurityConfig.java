@@ -1,5 +1,6 @@
 package com.xingchenproject.template.projecttemplate.config;
 
+import com.xingchenproject.template.projecttemplate.filterAndInterceptor.TokenFilter;
 import com.xingchenproject.template.projecttemplate.service.UserAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
 /**
@@ -32,6 +34,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     private AccessDeniedHandler accessDeniedHandler;
     @Autowired
     private LogoutSuccessHandler logoutSuccessHandler;
+    @Autowired
+    private TokenFilter tokenFilter;
 
     /**
      * 配置密码加密类
@@ -65,6 +69,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
+                //  添加过滤器
+                .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class)
                 //  配置不需要权限页面
                 .authorizeRequests()
                 .antMatchers("/api/user/loginTest")

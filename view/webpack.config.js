@@ -43,6 +43,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "xingchen-project-view",
             template: "./index.html",
+            favicon: path.resolve("res/img/favicon.ico")
         }),
         //  dist文件夹缓存清除
         new CleanWebpackPlugin(),
@@ -75,6 +76,9 @@ module.exports = {
             "__tcomponent__": path.resolve(__dirname, "src/t-component"),
             "__model__": path.resolve(__dirname, "src/model"),
             "__service__": path.resolve(__dirname, "src/service"),
+            "__store__": path.resolve(__dirname, "src/store"),
+            "__util__": path.resolve(__dirname, "src/util"),
+            "__protocol__": path.resolve(__dirname, "src/protocol"),
         }
     },
 };
