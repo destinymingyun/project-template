@@ -150,4 +150,25 @@ public class MapperTest {
             System.out.println(userRole);
         }
     }
+
+    /**
+     * 测试删除用户角色
+     */
+    @Test
+    public void deleteAllUserRoleByUserId() {
+        Integer i = userRoleMapper.deleteAllUserRoleByUserId(1);
+        Assertions.assertNotEquals(0, i);
+    }
+
+    /**
+     * 测试根据账户信息修改该账户的密码
+     */
+    @Test
+    public void updatePasswordByUserAccount() {
+        UserAccount userAccount = new UserAccount();
+        userAccount.setAccount("test1");
+        userAccount.setPassword("123456");
+        Integer i = userAccountMapper.updatePasswordByUserAccount(userAccount, "123");
+        Assertions.assertNotEquals(0, i);
+    }
 }

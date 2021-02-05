@@ -5,6 +5,17 @@
         INSERT INTO `user_account` (`account`, `password`)
         VALUES (#{account}, #{password});
     </insert>
+    <update id="updatePasswordByUserAccount">
+        UPDATE `user_account`
+        SET `password` = #{newPassword}
+        WHERE `account` = #{userAccount.account}
+          AND password = #{userAccount.password};
+    </update>
+    <update id="updateStatusByUserId">
+        UPDATE `user_account`
+        SET `status` = #{newStatus}
+        WHERE `user_id` = #{userId};
+    </update>
     <select id="getUserAccountByAccount" resultType="com.xingchenproject.template.projecttemplate.model.po.UserAccount">
         SELECT *
         FROM `user_account`

@@ -7,11 +7,11 @@ import lombok.Data;
 import java.util.Map;
 
 /**
- * 返回给前端的数据格式
+ * 返回给前端的数据格式,json格式
  */
 @Data
 @Builder
-public class ResponseData {
+public class ResponseJsonData {
     private String token;
     private int code;
     private String msg;

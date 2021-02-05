@@ -2,6 +2,7 @@ package com.xingchenproject.template.projecttemplate.mapper;
 
 import com.xingchenproject.template.projecttemplate.model.po.RoleName;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 系统角色名mapper
@@ -21,4 +22,12 @@ public interface RoleNameMapper {
      * @return 返回对应的系统角色
      */
     public RoleName getRoleByRoleId(int roleId);
+
+    /**
+     * 更新角色名
+     * @param roleId 角色id
+     * @param newRoleName 角色名
+     * @return 返回数据库中受影响的夯实
+     */
+    public Integer updateRoleNameByRoleId(@Param("roleId") int roleId, @Param("newRoleName")String newRoleName);
 }

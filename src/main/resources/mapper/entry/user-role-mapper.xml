@@ -5,6 +5,11 @@
         INSERT INTO `user_role` (`user_id`, `role_id`)
         VALUES (#{userId}, #{roleId});
     </insert>
+    <delete id="deleteAllUserRoleByUserId">
+        DELETE
+        FROM `user_role`
+        WHERE `user_id` = #{userId};
+    </delete>
 
     <select id="getUserRoleByUserRoleId" resultType="com.xingchenproject.template.projecttemplate.model.po.UserRole">
         SELECT *

@@ -1,6 +1,6 @@
 package com.xingchenproject.template.projecttemplate.security;
 
-import com.xingchenproject.template.projecttemplate.model.vo.ResponseData;
+import com.xingchenproject.template.projecttemplate.model.vo.ResponseJsonData;
 import com.xingchenproject.template.projecttemplate.protocol.ResponseCode;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
@@ -19,10 +19,10 @@ public class AjaxAccessDeniedHandlerImpl implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                        AccessDeniedException e) throws IOException, ServletException {
-        ResponseData responseData = ResponseData.builder()
+        ResponseJsonData responseJsonData = ResponseJsonData.builder()
                 .code(ResponseCode.ACCESS_DENIED)
                 .msg(ResponseCode.ACCESS_DENIED_NAME)
                 .build();
-        HttpServletJsonResponseWriter.writer(httpServletResponse, responseData);
+        HttpServletJsonResponseWriter.writer(httpServletResponse, responseJsonData);
     }
 }

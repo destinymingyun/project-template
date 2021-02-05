@@ -1,6 +1,6 @@
 package com.xingchenproject.template.projecttemplate.security;
 
-import com.xingchenproject.template.projecttemplate.model.vo.ResponseData;
+import com.xingchenproject.template.projecttemplate.model.vo.ResponseJsonData;
 import com.xingchenproject.template.projecttemplate.protocol.ResponseCode;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
@@ -18,10 +18,10 @@ import java.io.IOException;
 public class AjaxAuthenticationFailureHandlerImpl implements AuthenticationFailureHandler {
     @Override
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-        ResponseData responseData = ResponseData.builder()
+        ResponseJsonData responseJsonData = ResponseJsonData.builder()
                 .code(ResponseCode.USER_LOGIN_FAILED)
                 .msg(ResponseCode.USER_LOGIN_FAILED_NAME)
                 .build();
-        HttpServletJsonResponseWriter.writer(httpServletResponse, responseData);
+        HttpServletJsonResponseWriter.writer(httpServletResponse, responseJsonData);
     }
 }

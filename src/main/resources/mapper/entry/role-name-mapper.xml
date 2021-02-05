@@ -5,6 +5,11 @@
         INSERT INTO `role` (`role_name`, `role_desc`)
         VALUES (#{roleName}, #{roleDesc});
     </insert>
+    <update id="updateRoleNameByRoleId">
+        UPDATE `role`
+        SET `role_name` = #{newRoleName}
+        WHERE `role_id` = #{newRoleName};
+    </update>
 
     <select id="getRoleByRoleId" resultType="com.xingchenproject.template.projecttemplate.model.po.RoleName">
         SELECT *

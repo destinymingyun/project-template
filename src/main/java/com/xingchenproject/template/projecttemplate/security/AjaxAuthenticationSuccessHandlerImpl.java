@@ -2,7 +2,7 @@ package com.xingchenproject.template.projecttemplate.security;
 
 import com.xingchenproject.template.projecttemplate.model.bo.UserDetailsImpl;
 import com.xingchenproject.template.projecttemplate.model.po.UserAccount;
-import com.xingchenproject.template.projecttemplate.model.vo.ResponseData;
+import com.xingchenproject.template.projecttemplate.model.vo.ResponseJsonData;
 import com.xingchenproject.template.projecttemplate.protocol.ResponseCode;
 import com.xingchenproject.template.projecttemplate.util.JwtTokenUtil;
 import org.springframework.security.core.Authentication;
@@ -23,11 +23,11 @@ public class AjaxAuthenticationSuccessHandlerImpl implements AuthenticationSucce
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         UserAccount userAccount = userDetails.getUserAccount();
-        ResponseData responseData = ResponseData.builder()
+        ResponseJsonData responseJsonData = ResponseJsonData.builder()
                 .token(JwtTokenUtil.createToken(userAccount))
                 .code(ResponseCode.SUCCESS)
                 .msg(ResponseCode.SUCCESS_NAME)
                 .build();
-        HttpServletJsonResponseWriter.writer(httpServletResponse, responseData);
+        HttpServletJsonResponseWriter.writer(httpServletResponse, responseJsonData);
     }
 }

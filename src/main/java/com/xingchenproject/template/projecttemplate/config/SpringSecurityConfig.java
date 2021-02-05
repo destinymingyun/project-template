@@ -65,7 +65,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
      *
      * @param http 请求配置
      */
-
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http

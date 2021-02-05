@@ -10,7 +10,6 @@ import java.util.Collection;
  */
 @Mapper
 public interface UserRoleMapper {
-
     /**
      * 添加用户角色映射
      * 添加成功后会回填id至userRole.userRoleId
@@ -31,4 +30,11 @@ public interface UserRoleMapper {
      * @return 返回该用户角色信息
      */
     public Collection<UserRole> getUserRolesByUserId(int userId);
+
+    /**
+     * 根据用户id删除用户全部角色信息
+     * @param userId 用户id
+     * @return 数据库中受影响的夯实，为0则失败
+     */
+    public Integer deleteAllUserRoleByUserId(int userId);
 }

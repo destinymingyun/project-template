@@ -37,7 +37,7 @@ public class UserAccountServiceImpl implements UserAccountService {
      *
      * @param account 用户帐户名
      * @return 返回用户密码
-     * @throws UsernameNotFoundException
+     * @throws UsernameNotFoundException 用户名未找到
      */
     @Override
     @Transactional
@@ -91,5 +91,35 @@ public class UserAccountServiceImpl implements UserAccountService {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 更改用户角色
+     * @param userRoles 用户新角色集
+     * @return 修改成功返回true，否则返回false
+     */
+    @Override
+    @Transactional
+    public boolean changeUserRole(Collection<UserRole> userRoles) {
+        boolean ret = false;
+        for (UserRole userRole : userRoles) {
+            if (!ret) {
+                userRoleMapper.deleteAllUserRoleByUserId(userRole.getUserId());
+                ret = true;
+            }
+            userRoleMapper.postUserRole(userRole);
+        }
+        return true;
+    }
+
+    /**
+     * 删除用户全部角色
+     * @param userId 用户id
+     * @return 删除成功返回true，否则返回false
+     */
+    @Override
+    public boolean deleteAllUserRole(int userId) {
+        Integer line = userRoleMapper.deleteAllUserRoleByUserId(userId);
+        return line != null && line != 0;
     }
 }

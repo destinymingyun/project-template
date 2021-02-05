@@ -1,6 +1,6 @@
 package com.xingchenproject.template.projecttemplate.security;
 
-import com.xingchenproject.template.projecttemplate.model.vo.ResponseData;
+import com.xingchenproject.template.projecttemplate.model.vo.ResponseJsonData;
 import com.xingchenproject.template.projecttemplate.protocol.ResponseCode;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -18,10 +18,10 @@ import java.io.IOException;
 public class AjaxAuthenticationEntryPointImpl implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-        ResponseData responseData = ResponseData.builder()
+        ResponseJsonData responseJsonData = ResponseJsonData.builder()
                 .code(ResponseCode.UNAUTHORIZED)
                 .msg(ResponseCode.UNAUTHORIZED_NAME)
                 .build();
-        HttpServletJsonResponseWriter.writer(httpServletResponse, responseData);
+        HttpServletJsonResponseWriter.writer(httpServletResponse, responseJsonData);
     }
 }
