@@ -34,6 +34,18 @@ export default {
       msg: "",
     }
   },
+  methods: {
+    /**
+     * 当该元素子元素失去焦点时
+     **/
+    blurItem() {
+      if (this.$parent.$options.name === "t-form" && this.$parent.$props.quickValidate) {
+        this.$parent.validate(this.labelFor);
+      } else {
+        this.mode = null;
+      }
+    }
+  },
   computed: {
     /**
      * 是否显示label标签
@@ -49,7 +61,7 @@ export default {
      * @return boolean
      */
     isShowAlert() {
-      return !(this.mode === "" || this.mode === undefined || this.mode === "");
+      return !(this.mode === null || this.mode === undefined || this.mode === "");
     },
   }
 };
