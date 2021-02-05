@@ -5,11 +5,17 @@ import Axios from "axios";
 import store from "__store__";
 import router from "__router__";
 
-//  放行地址
+/**
+ * 放行路径
+ * @type {string[]}
+ */
 const urls = [
     "/api/user/login"
 ];
 
+/**
+ * 请求拦截配置
+ */
 Axios.interceptors.request.use(
     function (config) {
         let ret = urls.some(value => value === config.url);
@@ -25,6 +31,9 @@ Axios.interceptors.request.use(
     }
 );
 
+/**
+ * 放行拦截配置
+ */
 Axios.interceptors.response.use(
     //  成功响应
     function (config) {

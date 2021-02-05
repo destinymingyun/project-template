@@ -2,7 +2,7 @@ package com.xingchenproject.template.projecttemplate.model.po;
 
 import lombok.Data;
 
-/*
+/**
     系统角色类
  */
 @Data

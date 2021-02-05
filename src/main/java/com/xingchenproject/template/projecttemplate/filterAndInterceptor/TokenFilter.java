@@ -14,6 +14,14 @@ import java.io.IOException;
  */
 @Component
 public class TokenFilter extends OncePerRequestFilter {
+    /**
+     * 实现token过滤器
+     * @param request 请求
+     * @param response 相应
+     * @param filterChain 过滤器链
+     * @throws ServletException servlet异常
+     * @throws IOException io异常
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {

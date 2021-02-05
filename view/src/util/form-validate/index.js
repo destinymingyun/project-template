@@ -1,6 +1,9 @@
 /**
  * 表单验证类
- * v1.1.1 新增非空验证
+ * @deprecated
+ * v1.1.1 <p/>
+ * 新增 <p/>
+ * 非空验证器 <p/>
  **/
 import FormValidate from "./form-validate";
 import NotNullValidate from "./not-null-validate";

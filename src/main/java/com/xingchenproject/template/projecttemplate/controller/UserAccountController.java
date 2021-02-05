@@ -20,7 +20,7 @@ public class UserAccountController {
 
     /**
      * 注册帐户信息
-     *
+     * @param userDetails 用户账号相关信息类
      * @return 返回json报文
      */
     @PostMapping("/register")

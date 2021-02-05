@@ -1,9 +1,9 @@
-/**
- * 用户登录实现类1
- **/
 import AccountService from "./AccountService";
 import Axios from "axios";
 
+/**
+ * 用户登录服务实现类1
+ **/
 class AccountServiceImpl extends AccountService{
     login(userAccount) {
         const url = "/api/user/login";
