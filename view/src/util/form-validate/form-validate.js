@@ -1,10 +1,11 @@
+import Mode from "__protocol__/Mode";
 /**
  * 表单验证基类
- * @param msg 需要回显的信息
- * @param mode 应用场景，即验证级别
+ * @deprecated
+ * 默认设置场景异常级<p/>
+ * @param msg 需要回显的信息<p/>
+ * @param mode 应用场景，即验证级别<p/>
  **/
-import Mode from "__protocol__/Mode";
-
 class FormValidate {
     /**
      * 构造函数

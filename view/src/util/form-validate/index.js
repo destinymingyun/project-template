@@ -3,8 +3,9 @@
  * v1.1.1 新增非空验证
  **/
 import FormValidate from "./form-validate";
-import NotNullValidate from "./NotNullValidate";
+import NotNullValidate from "./not-null-validate";
+import MinAndMaxValidate from "__util__/form-validate/min-and-max-validate";
 
 export default {
-    FormValidate, NotNullValidate,
+    FormValidate, NotNullValidate, MinValidate: MinAndMaxValidate,
 }
