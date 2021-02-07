@@ -1,7 +1,7 @@
 <template>
   <div class="t-input">
-    <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name"
-           :placeholder="placeholder" :type="isPassword" :value="value" @blur="blurInput"/>
+    <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name" :placeholder="placeholder"
+           :type="isPassword" :value="value" @blur="blurInput" :readonly ="readonly"/>
   </div>
 </template>
 
@@ -35,6 +35,11 @@ export default {
       type: Boolean,
       default: false,
     },
+    //  是否只读
+    readonly: {
+      type: Boolean,
+      default: false,
+    }
   },
   methods: {
     /**

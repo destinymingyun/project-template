@@ -6,6 +6,25 @@
   background-color: #f8f8f9;
 }
 
+//  背景白色
+.panel-white {
+  background-color: #fff;
+}
+
+//  背景白带悬停变灰
+.panel-white-hover-gray:extend(.panel-white) {
+  &:hover:extend(.panel-gray) {
+
+  }
+}
+
+//  背景白带悬停变浅
+.panel-white-hover-primary-light:extend(.panel-white) {
+  &:hover:extend(.primary-active-light) {
+
+  }
+}
+
 //  正常色
 .primary {
   background-color: #2d8cf0;
