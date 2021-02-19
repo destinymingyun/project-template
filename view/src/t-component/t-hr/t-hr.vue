@@ -13,7 +13,7 @@ export default {
     //  文本
     text: {
       type: String,
-      default: ""
+      default: "",
     }
   },
   computed: {

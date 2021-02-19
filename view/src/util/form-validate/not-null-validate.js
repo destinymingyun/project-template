@@ -7,7 +7,7 @@ import FormValidate from "./form-validate";
 class NotNullValidate extends FormValidate {
     constructor(msg, mode) {
         super(msg, mode);
-        if (msg != null && msg && undefined && msg !== "") {
+        if (msg !== "") {
             this.msg = msg;
         } else {
             this.msg = "此项值不能为空";

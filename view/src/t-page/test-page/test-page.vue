@@ -20,6 +20,21 @@
       <t-option value="select1">a b c</t-option>
       <t-option value="select2">a b c</t-option>
     </t-select>
+    <t-time></t-time>
+    <t-input></t-input>
+    <t-form :model="form" :rules="formRule">
+      <t-form-item label-for="input">
+        <t-input v-model="form.input" placeholder="123"></t-input>
+      </t-form-item>
+      <t-form-item>
+        <t-button type="submit">提交</t-button>
+      </t-form-item>
+    </t-form>
+    {{form.input}}
+    <t-button @click="modelButton">模块框</t-button>
+    <t-dialog v-model="model">
+      <t-button @click="modelButton" mode="primary">模块框</t-button>
+    </t-dialog>
   </div>
 </template>
 
@@ -33,17 +48,40 @@ import {TCheckBox} from "__tcomponent__/t-check-box";
 import TCheckBoxItem from "__tcomponent__/t-check-box/t-check-box-item";
 import {TSelect} from "__tcomponent__/t-select";
 import {TOption} from "__tcomponent__/t-select";
+import TTime from "__tcomponent__/t-time";
+import {TForm} from "__tcomponent__/t-form";
+import {TFormItem} from "__tcomponent__/t-form";
+import FormValidate from "__util__/form-validate";
+import TDialog from "__tcomponent__/t-dialog";
 
 export default {
   name: "test-page",
-  components: {TCheckBoxItem, TCheckBox, TRadioGroup, TRadioItem, TButton, TInput, TCard, TSelect, TOption},
+  components: {
+    TDialog,
+    TFormItem,
+    TForm, TCheckBoxItem, TCheckBox, TRadioGroup, TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime},
   data() {
     return {
+      form: {
+        input: "",
+      },
+      formRule: {
+        input: [new FormValidate.NumberValidate],
+      },
       radio: "",
       checkbox: new Array(0),
       selectValue: "",
+      model: false,
     };
   },
+  methods: {
+    /**
+     * 模态框点击按钮
+     */
+    modelButton() {
+      this.model = !this.model;
+    }
+  }
 }
 ;
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="t-form">
-    <form @submit="submitForm" @reset="resetForm" method="post">
+    <form @submit.stop="submitForm" @reset="resetForm" method="post">
       <slot></slot>
     </form>
   </div>
@@ -31,7 +31,6 @@ export default {
      * 对外透视原生表单submit事件
      */
     submitForm() {
-      event.preventDefault();
       this.validateForm();
       this.$emit("submit");
     },

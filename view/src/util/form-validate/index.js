@@ -4,11 +4,15 @@
  * v1.1.1 <p/>
  * 新增 <p/>
  * 非空验证器 <p/>
+ * v1.2.3 <p/>
+ * 新增 <p/>
+ * 数值验证器
  **/
 import FormValidate from "./form-validate";
 import NotNullValidate from "./not-null-validate";
 import MinAndMaxValidate from "__util__/form-validate/min-and-max-validate";
+import NumberValidate from "./number-validate";
 
 export default {
-    FormValidate, NotNullValidate, MinValidate: MinAndMaxValidate,
+    FormValidate, NotNullValidate, MinAndMaxValidate, NumberValidate,
 }

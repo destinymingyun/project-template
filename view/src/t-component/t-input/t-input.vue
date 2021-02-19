@@ -1,7 +1,11 @@
 <template>
   <div class="t-input">
-    <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name" :placeholder="placeholder"
-           :type="isPassword" :value="value" @blur="blurInput" :readonly ="readonly"/>
+    <div class="before"></div>
+    <div class="input">
+      <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name" :placeholder="placeholder"
+             :type="isPassword" :value="value" @blur="blurInput" :readonly="readonly"/>
+    </div>
+    <div class="after"></div>
   </div>
 </template>
 
@@ -88,9 +92,18 @@ export default {
 
 <style scoped lang="less">
 .t-input {
-  input {
-    outline: none;
-    border: none;
+  display: flex;
+  width: 100%;
+
+  .input {
+    width: 100%;
+    input {
+      outline: none;
+      border: none;
+    }
+  }
+
+  .before, .after {
   }
 }
 </style>
