@@ -1,7 +1,7 @@
 <template>
   <div class="test-page">
     {{ this.$store.getters.getToken }}
-    <t-input placeholder="inputTest" long></t-input>
+    <t-input placeholder="inputTest" long><t-icon icon="user" slot="prefix"></t-icon></t-input>
     <t-button mode="success" long>按钮</t-button>
     <t-card>
       123
@@ -36,7 +36,7 @@
       <t-button @click="modelButton" mode="primary">模块框</t-button>
     </t-dialog>
     <div>
-      <h1><t-icon icon="password" color="blue"></t-icon></h1>
+      <h1><t-icon icon="user" color="blue"></t-icon></h1>
     </div>
   </div>
 </template>

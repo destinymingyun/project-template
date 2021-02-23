@@ -25,6 +25,10 @@ export default {
       switch (this.icon) {
         case "password":
           return iconPath.passwordSvg;
+        case "user":
+          return iconPath.userSvg;
+        case "search":
+          return iconPath.searchSvg;
         default:
           return null;
       }

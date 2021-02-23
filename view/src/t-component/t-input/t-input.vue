@@ -1,17 +1,19 @@
 <template>
   <div class="t-input">
-    <div class="before"></div>
     <div class="input">
+      <slot name="prefix"></slot>
       <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name" :placeholder="placeholder"
              :type="isPassword" :value="value" @blur="blurInput" :readonly="readonly"/>
+      <slot name="suffix"></slot>
     </div>
-    <div class="after"></div>
   </div>
 </template>
 
 <script>
+import TIcon from "__tcomponent__/t-icon";
 export default {
   name: "t-input",
+  components: {TIcon},
   props: {
     //  输入框值
     value: {
@@ -92,18 +94,15 @@ export default {
 
 <style scoped lang="less">
 .t-input {
-  display: flex;
-  width: 100%;
-
   .input {
+    display: flex;
+    align-items: center;
     width: 100%;
+    background-color: #fff;
     input {
       outline: none;
       border: none;
     }
-  }
-
-  .before, .after {
   }
 }
 </style>
