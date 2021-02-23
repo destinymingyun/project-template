@@ -35,6 +35,9 @@
     <t-dialog v-model="model">
       <t-button @click="modelButton" mode="primary">模块框</t-button>
     </t-dialog>
+    <div>
+      <h1><t-icon icon="password" color="blue"></t-icon></h1>
+    </div>
   </div>
 </template>
 
@@ -53,13 +56,14 @@ import {TForm} from "__tcomponent__/t-form";
 import {TFormItem} from "__tcomponent__/t-form";
 import FormValidate from "__util__/form-validate";
 import TDialog from "__tcomponent__/t-dialog";
+import TIcon from "__tcomponent__/t-icon";
 
 export default {
   name: "test-page",
   components: {
     TDialog,
     TFormItem,
-    TForm, TCheckBoxItem, TCheckBox, TRadioGroup, TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime},
+    TForm, TCheckBoxItem, TCheckBox, TRadioGroup, TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon},
   data() {
     return {
       form: {

@@ -35,6 +35,11 @@ module.exports = {
                     "less-loader",
                 ],
             },
+            //  svg文件
+            {
+                test: /\.svg$/,
+                loader: "svg-url-loader",
+            }
         ]
     },
     //  插件
@@ -79,6 +84,7 @@ module.exports = {
             "__store__": path.resolve(__dirname, "src/store"),
             "__util__": path.resolve(__dirname, "src/util"),
             "__protocol__": path.resolve(__dirname, "src/protocol"),
+            "__img__": path.resolve(__dirname, "res/img"),
         }
     },
 };
