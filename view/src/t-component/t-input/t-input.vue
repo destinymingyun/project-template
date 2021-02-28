@@ -17,7 +17,7 @@ export default {
   props: {
     //  输入框值
     value: {
-      type: String,
+      type: String | Number,
     },
     //  是否未密码模式
     password: {
