@@ -10,9 +10,8 @@
  **/
 import FormValidate from "./form-validate";
 import NotNullValidate from "./not-null-validate";
-import MinAndMaxValidate from "__util__/form-validate/min-and-max-validate";
 import NumberValidate from "./number-validate";
 
 export default {
-    FormValidate, NotNullValidate, MinAndMaxValidate, NumberValidate,
+    FormValidate, NotNullValidate, NumberValidate,
 }

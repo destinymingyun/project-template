@@ -38,6 +38,8 @@
     <div>
       <h1><t-icon icon="user" color="blue"></t-icon></h1>
     </div>
+    <t-switch v-model="switchValue" on-title="开" off-title="关"></t-switch>
+    {{switchValue}}
   </div>
 </template>
 
@@ -57,10 +59,12 @@ import {TFormItem} from "__tcomponent__/t-form";
 import FormValidate from "__util__/form-validate";
 import TDialog from "__tcomponent__/t-dialog";
 import TIcon from "__tcomponent__/t-icon";
+import TSwitch from "__tcomponent__/t-switch";
 
 export default {
   name: "test-page",
   components: {
+    TSwitch,
     TDialog,
     TFormItem,
     TForm, TCheckBoxItem, TCheckBox, TRadioGroup, TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon},
@@ -76,6 +80,7 @@ export default {
       checkbox: new Array(0),
       selectValue: "",
       model: false,
+      switchValue: false,
     };
   },
   methods: {
