@@ -1,5 +1,5 @@
 <template>
-  <div class="t-input">
+  <div :class="['t-input', isRadius]">
     <div class="input">
       <slot name="prefix"></slot>
       <input v-on="inputListeners" :class="[isLong]" :long="long" :mode="mode" :name="name" :placeholder="placeholder"
@@ -45,7 +45,12 @@ export default {
     readonly: {
       type: Boolean,
       default: false,
-    }
+    },
+    //  是否开启圆角
+    radius: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     /**
@@ -83,23 +88,32 @@ export default {
     /**
      * 是否独占一行
      * 若long字段为true则独占一行
-     * @return {string}
+     * @return string
      */
     isLong() {
       return this.long ? "long" : "";
-    }
+    },
+    /**
+     * 是否开启圆角，
+     * @return String
+     */
+    isRadius() {
+      return  this.radius ? "radius" : "";
+    },
   }
 };
 </script>
 
 <style scoped lang="less">
 .t-input {
+  background-color: #fff;
+  padding: 0 .5em;
   .input {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #fff;
     input {
+      flex-grow: 9;
       outline: none;
       border: none;
     }

@@ -1,7 +1,9 @@
 <template>
-  <svg class="t-icon" viewBox="0 0 1024 1024" :fill="color">
+  <div @click="click">
+    <svg class="t-icon" viewBox="0 0 1024 1024" :fill="color">
     <path :d="getType"/>
-  </svg>
+    </svg>
+  </div>
 </template>
 
 <script>
@@ -29,11 +31,23 @@ export default {
           return iconPath.userSvg;
         case "search":
           return iconPath.searchSvg;
+        case "add":
+          return iconPath.add;
+        case "subtract":
+          return iconPath.subtract;
         default:
           return null;
       }
     }
-  }
+  },
+  methods: {
+    /**
+     * 对外透明点击事件
+     */
+    click() {
+      this.$emit("click");
+    },
+  },
 };
 </script>
 

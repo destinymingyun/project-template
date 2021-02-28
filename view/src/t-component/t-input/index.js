@@ -11,6 +11,8 @@
  * onload： 输入框只允许读<p>
  * v1.2.4.2 新增<p>
  * 现有prefix与suffix插槽
+ * v1.2.6 新增<p>
+ * radius属性，可以设置圆角
  **/
 import TInput from "./t-input.vue";
 

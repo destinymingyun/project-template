@@ -40,6 +40,8 @@
     </div>
     <t-switch v-model="switchValue" on-title="开" off-title="关"></t-switch>
     {{switchValue}}
+    <t-input-number v-model="inputNumberValue" style="width: 300px" radius></t-input-number>
+    {{inputNumberValue}}
   </div>
 </template>
 
@@ -60,10 +62,12 @@ import FormValidate from "__util__/form-validate";
 import TDialog from "__tcomponent__/t-dialog";
 import TIcon from "__tcomponent__/t-icon";
 import TSwitch from "__tcomponent__/t-switch";
+import TInputNumber from "__tcomponent__/t-input-number";
 
 export default {
   name: "test-page",
   components: {
+    TInputNumber,
     TSwitch,
     TDialog,
     TFormItem,
@@ -81,6 +85,7 @@ export default {
       selectValue: "",
       model: false,
       switchValue: false,
+      inputNumberValue: 1,
     };
   },
   methods: {
@@ -89,7 +94,7 @@ export default {
      */
     modelButton() {
       this.model = !this.model;
-    }
+    },
   }
 }
 ;
