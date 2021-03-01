@@ -1,7 +1,9 @@
 <template>
   <div class="test-page">
     {{ this.$store.getters.getToken }}
-    <t-input placeholder="inputTest" long><t-icon icon="user" slot="prefix"></t-icon></t-input>
+    <t-input placeholder="inputTest" long>
+      <t-icon icon="user" slot="prefix"></t-icon>
+    </t-input>
     <t-button mode="success" long>按钮</t-button>
     <t-card>
       123
@@ -15,7 +17,7 @@
       <t-check-box-item value="aa">aaa</t-check-box-item>
       <t-check-box-item value="bb">bbb</t-check-box-item>
     </t-check-box>
-    {{checkbox}}
+    {{ checkbox }}
     <t-select v-model="selectValue" placeholder="在此选择" onlySelect>
       <t-option value="select1">a b c</t-option>
       <t-option value="select2">a b c</t-option>
@@ -30,18 +32,25 @@
         <t-button type="submit">提交</t-button>
       </t-form-item>
     </t-form>
-    {{form.input}}
+    {{ form.input }}
     <t-button @click="modelButton">模块框</t-button>
     <t-dialog v-model="model">
       <t-button @click="modelButton" mode="primary">模块框</t-button>
     </t-dialog>
     <div>
-      <h1><t-icon icon="user" color="blue"></t-icon></h1>
+      <h1>
+        <t-icon icon="user" color="blue"></t-icon>
+      </h1>
     </div>
     <t-switch v-model="switchValue" on-title="开" off-title="关"></t-switch>
-    {{switchValue}}
+    {{ switchValue }}
     <t-input-number v-model="inputNumberValue" style="width: 300px" radius></t-input-number>
-    {{inputNumberValue}}
+    {{ inputNumberValue }}
+    <t-table :table-data="tableData">
+      <t-table-item title="title">
+      </t-table-item>
+      <t-table-item title="name"></t-table-item>
+    </t-table>
   </div>
 </template>
 
@@ -63,15 +72,15 @@ import TDialog from "__tcomponent__/t-dialog";
 import TIcon from "__tcomponent__/t-icon";
 import TSwitch from "__tcomponent__/t-switch";
 import TInputNumber from "__tcomponent__/t-input-number";
+import {TTable} from "__tcomponent__/t-table";
+import {TTableItem} from "__tcomponent__/t-table";
 
 export default {
   name: "test-page",
   components: {
-    TInputNumber,
-    TSwitch,
-    TDialog,
-    TFormItem,
-    TForm, TCheckBoxItem, TCheckBox, TRadioGroup, TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon},
+    TInputNumber, TSwitch, TDialog, TFormItem, TTable, TTableItem, TForm, TCheckBoxItem, TCheckBox, TRadioGroup,
+    TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon
+  },
   data() {
     return {
       form: {
@@ -86,6 +95,16 @@ export default {
       model: false,
       switchValue: false,
       inputNumberValue: 1,
+      tableData: [
+        {
+          title: "标题1",
+          name: "名字1",
+        },
+        {
+          name: "名字2",
+          title: "标题2",
+        }
+      ],
     };
   },
   methods: {
