@@ -1,5 +1,5 @@
 <template>
-  <div class="t-menu panel-white" v-on="inputListeners">
+  <div :class="['t-menu', 'panel-white', isVertical]" v-on="inputListeners">
     <slot></slot>
   </div>
 </template>
@@ -39,6 +39,12 @@ export default {
             }
           });
     },
+    /**
+     * 是否垂直，若vertical为true，返回垂直样式
+     */
+    isVertical() {
+      return this.vertical ? "vertical" : "";
+    }
   }
 };
 </script>
@@ -46,5 +52,8 @@ export default {
 <style scoped lang="less">
   .t-menu {
     display: flex;
+  }
+  .vertical{
+    flex-direction: column;
   }
 </style>

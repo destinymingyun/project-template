@@ -56,6 +56,17 @@
       <t-menu-item title="菜单二" name="2"></t-menu-item>
       <t-menu-item title="菜单三" name="3"></t-menu-item>
     </t-menu>
+    <t-layout>
+      <t-header style="height: 100px; background-color:yellow;">
+
+      </t-header>
+      <t-content style="height: 300px; background-color:gray;">
+        <t-sider style="width: 100px; background-color:skyblue;"></t-sider>
+      </t-content>
+      <t-footer style="height: 100px; background-color:green;">
+
+      </t-footer>
+    </t-layout>
   </div>
 </template>
 
@@ -65,13 +76,10 @@ import TButton from "__tcomponent__/t-button";
 import TCard from "__tcomponent__/t-card";
 import {TRadioItem} from "__tcomponent__/t-radio-group";
 import {TRadioGroup} from "__tcomponent__/t-radio-group";
-import {TCheckBox} from "__tcomponent__/t-check-box";
-import TCheckBoxItem from "__tcomponent__/t-check-box/t-check-box-item";
-import {TSelect} from "__tcomponent__/t-select";
-import {TOption} from "__tcomponent__/t-select";
+import {TCheckBox, TCheckBoxItem} from "__tcomponent__/t-check-box";
+import {TSelect, TOption} from "__tcomponent__/t-select";
 import TTime from "__tcomponent__/t-time";
-import {TForm} from "__tcomponent__/t-form";
-import {TFormItem} from "__tcomponent__/t-form";
+import {TForm, TFormItem} from "__tcomponent__/t-form";
 import FormValidate from "__util__/form-validate";
 import TDialog from "__tcomponent__/t-dialog";
 import TIcon from "__tcomponent__/t-icon";
@@ -79,15 +87,17 @@ import TSwitch from "__tcomponent__/t-switch";
 import TInputNumber from "__tcomponent__/t-input-number";
 import {TTable} from "__tcomponent__/t-table";
 import {TTableItem} from "__tcomponent__/t-table";
-import {TMenu} from "__tcomponent__/t-menu";
-import {TMenuItem} from "__tcomponent__/t-menu";
+import {TMenu, TMenuItem} from "__tcomponent__/t-menu";
+import {TLayout, TContent, TFooter, THeader, TSider} from "__tcomponent__/t-layout";
 
 export default {
   name: "test-page",
   components: {
+    TSider,
+    TLayout,
     TMenuItem,
     TInputNumber, TSwitch, TDialog, TFormItem, TTable, TTableItem, TForm, TCheckBoxItem, TCheckBox, TRadioGroup,
-    TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon, TMenu
+    TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon, TMenu, TContent, TFooter, THeader
   },
   data() {
     return {
