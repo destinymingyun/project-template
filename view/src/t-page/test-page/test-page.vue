@@ -51,6 +51,11 @@
       </t-table-item>
       <t-table-item title="name"></t-table-item>
     </t-table>
+    <t-menu v-model="menuValue">
+      <t-menu-item title="登录" name="1" to="/loginAndRegister"></t-menu-item>
+      <t-menu-item title="菜单二" name="2"></t-menu-item>
+      <t-menu-item title="菜单三" name="3"></t-menu-item>
+    </t-menu>
   </div>
 </template>
 
@@ -74,12 +79,15 @@ import TSwitch from "__tcomponent__/t-switch";
 import TInputNumber from "__tcomponent__/t-input-number";
 import {TTable} from "__tcomponent__/t-table";
 import {TTableItem} from "__tcomponent__/t-table";
+import {TMenu} from "__tcomponent__/t-menu";
+import {TMenuItem} from "__tcomponent__/t-menu";
 
 export default {
   name: "test-page",
   components: {
+    TMenuItem,
     TInputNumber, TSwitch, TDialog, TFormItem, TTable, TTableItem, TForm, TCheckBoxItem, TCheckBox, TRadioGroup,
-    TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon
+    TRadioItem, TButton, TInput, TCard, TSelect, TOption, TTime, TIcon, TMenu
   },
   data() {
     return {
@@ -105,6 +113,7 @@ export default {
           title: "标题2",
         }
       ],
+      menuValue: "1",
     };
   },
   methods: {

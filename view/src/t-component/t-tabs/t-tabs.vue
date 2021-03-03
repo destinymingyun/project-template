@@ -1,6 +1,11 @@
 <template>
   <div class="t-tabs">
-    这是t-tabs组件
+    <div class="title">
+
+    </div>
+    <div class="panel">
+      
+    </div>
   </div>
 </template>
 

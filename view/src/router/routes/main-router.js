@@ -1,6 +1,7 @@
 /**
  * 程序主路由
  **/
+import componentHelpRouter from "./component-help-page-router";
 const route = [
     //  默认页面
     {
@@ -22,6 +23,7 @@ const route = [
         path: "/loginAndRegister",
         component: () => import("__tpage__/login-and-register-page"),
     },
+    ...componentHelpRouter,
 ];
 
 export default route;
