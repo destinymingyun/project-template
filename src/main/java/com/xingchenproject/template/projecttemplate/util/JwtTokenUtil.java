@@ -10,6 +10,7 @@ import java.util.Date;
 
 /**
  * token生成读取工具
+ * @author xingchen
  */
 public class JwtTokenUtil {
     public final static String JWT_ID = "project-template";

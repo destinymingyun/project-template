@@ -1,5 +1,6 @@
 /**
  * 场景类型
+ * @author xingchen
  **/
 //  成功
 const SUCCESS = "success";

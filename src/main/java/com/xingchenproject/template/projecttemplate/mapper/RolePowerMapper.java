@@ -7,6 +7,7 @@ import java.util.Collection;
 
 /**
  * 角色权限实现类
+ * @author xingchen
  */
 @Mapper
 public interface RolePowerMapper {
@@ -15,19 +16,19 @@ public interface RolePowerMapper {
      * 若添加成功返回填rolePower.rolePowerId
      * @param rolePower 用户权限对应表
      */
-    public void postRolePower(RolePower rolePower);
+    void postRolePower(RolePower rolePower);
 
     /**
      * 根据用户权限id返回该记录
      * @param rolePowerId 用户权限id
      * @return 返回用户权限记录
      */
-    public RolePower getRolePowerByRolePowerId(int rolePowerId);
+    RolePower getRolePowerByRolePowerId(int rolePowerId);
 
     /**
      * 根据角色id查看该角色所有权限
      * @param roleId 角色id
      * @return 返回该角色权限对应的表
      */
-    public Collection<RolePower> getRolePowerByRoleId(int roleId);
+    Collection<RolePower> getRolePowerByRoleId(int roleId);
 }

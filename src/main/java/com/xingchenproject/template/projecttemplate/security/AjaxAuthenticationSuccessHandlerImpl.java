@@ -16,11 +16,12 @@ import java.io.IOException;
 
 /**
  * 处理登录成功情况
+ * @author xingchen
  */
 @Component
 public class AjaxAuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler {
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         UserAccount userAccount = userDetails.getUserAccount();
         ResponseJsonData responseJsonData = ResponseJsonData.builder()

@@ -5,14 +5,21 @@ import org.springframework.security.core.GrantedAuthority;
 
 /**
  * 权限实体类
+ * @author  xingchen
  */
 @Data
 public class Power implements GrantedAuthority {
-    //  权限id，唯一值
+    /**
+     * 权限id，唯一值
+      */
     private int powerId;
-    //  权限名，唯一值
+    /**
+     * 权限名，唯一值
+     */
     private  String powerName;
-    //  权限描述
+    /**
+     * 权限描述
+     */
     private String powerDesc;
 
     @Override

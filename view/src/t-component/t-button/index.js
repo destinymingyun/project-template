@@ -1,6 +1,6 @@
 /**
  * 自主button组件
- * @deprecated
+ * @author xingchen
  * v1.0.8<p/>
  * 新增: <p/>
  * mode： 使用场景<p/>

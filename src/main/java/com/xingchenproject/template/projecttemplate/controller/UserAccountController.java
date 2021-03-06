@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 用户帐户相关业务处理器
+ * @author xingchen
  */
 @RestController
 @RequestMapping("/api/user")

@@ -1,5 +1,6 @@
 /**
  * VueX使用配置
+ * @author xingchen
  **/
 import Vue from "vue";
 import Vuex from "vuex";
@@ -16,7 +17,7 @@ const store = new Vuex.Store({
         },
     },
     getters: {
-        getToken: function(state) {
+        getToken: function() {
             return sessionStorage.getItem("token");
         },
     },

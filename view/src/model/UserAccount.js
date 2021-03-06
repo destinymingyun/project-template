@@ -1,5 +1,6 @@
 /**
  * 用户帐户实体类
+ * @author xingchen
  **/
 import Qs from "qs";
 

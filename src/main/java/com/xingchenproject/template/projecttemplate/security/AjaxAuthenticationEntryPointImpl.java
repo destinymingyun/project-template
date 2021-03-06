@@ -12,12 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *  处理用户未登录情况
+ * 处理用户未登录情况
+ *
+ * @author xingchen
  */
 @Component
 public class AjaxAuthenticationEntryPointImpl implements AuthenticationEntryPoint {
     @Override
-    public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
+    public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException {
         ResponseJsonData responseJsonData = ResponseJsonData.builder()
                 .code(ResponseCode.UNAUTHORIZED)
                 .msg(ResponseCode.UNAUTHORIZED_NAME)

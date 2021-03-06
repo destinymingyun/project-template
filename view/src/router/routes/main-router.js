@@ -1,5 +1,6 @@
 /**
  * 程序主路由
+ * @author xingchen
  **/
 import componentHelpRouter from "./component-help-page-router";
 const route = [

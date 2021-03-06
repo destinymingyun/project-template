@@ -1,5 +1,6 @@
 /**
  * svg原图<p/>
+ * @author xingchen
  * v1.2.4引入password图标<p/>
  * v1.2.5.引入 search,user图标
  * v1.2.6 引入 add,subtract图标

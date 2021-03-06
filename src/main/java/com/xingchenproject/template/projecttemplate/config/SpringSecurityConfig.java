@@ -19,6 +19,7 @@ import org.springframework.security.web.authentication.logout.LogoutSuccessHandl
 
 /**
  * spring-security配置类
+ * @author xingchen
  */
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {

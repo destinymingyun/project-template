@@ -1,9 +1,9 @@
+import FormValidate from "./form-validate";
+
 /**
  * 数字验证
+ * @author xingchen
  **/
-import FormValidate from "./form-validate";
-import Mode from "__protocol__/Mode";
-
 class NumberValidate extends FormValidate {
     /**
      * 构造函数

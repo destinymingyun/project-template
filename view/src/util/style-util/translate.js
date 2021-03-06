@@ -1,5 +1,6 @@
 /**
  * 平移js
+ * @author xingchen
  **/
 class Translate {
     /**

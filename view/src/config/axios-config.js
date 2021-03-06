@@ -1,5 +1,6 @@
 /**
  * axios拦截配置
+ * @author xingchen
  **/
 import Axios from "axios";
 import store from "__store__";

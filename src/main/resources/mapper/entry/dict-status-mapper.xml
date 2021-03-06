@@ -1,0 +1,8 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingchenproject.template.projecttemplate.mapper.DictStatusMapper">
+    <insert id="postDictStatus" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `dict_status` (`dict_id`, `dict_status_value`, `dict_status_name`, `dict_status_desc`)
+        VALUES (#{dictId}, #{dictStatusValue}, #{dictStatusName}, #{dictStatusDesc});
+    </insert>
+</mapper>

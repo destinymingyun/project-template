@@ -1,6 +1,6 @@
 /**
  * 下拉选择框
- * @deprecated
+ * @author xingchen
  * v1.2.2 <p>
  * 新增：<p/>
  * placeholder： 无输入提示框<p>

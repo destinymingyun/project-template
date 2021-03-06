@@ -8,15 +8,32 @@ import java.util.Map;
 
 /**
  * 返回给前端的数据格式,json格式
+ * @author xingchen
  */
 @Data
 @Builder
 public class ResponseJsonData {
+    /**
+     * token
+     */
     private String token;
+    /**
+     * 响应状态码
+     */
     private int code;
+    /**
+     * 响应消息
+     */
     private String msg;
+    /**
+     * 响应内容
+     */
     private Map<String, ?> data;
 
+    /**
+     * 返回json格式的字符串
+     * @return json格式字符串
+     */
     @Override
     public String toString() {
         JSONObject json = new JSONObject();

@@ -1,5 +1,6 @@
 /**
  * 组件帮助页模块路由
+ * @author xingchen
  **/
 const componentHelpRouter = [
     //  组件帮助页

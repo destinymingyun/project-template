@@ -11,11 +11,12 @@ import java.io.IOException;
 
 /**
  * 成功登出
+ * @author xingchen
  */
 @Component
 public class AjaxLogoutSuccessHandlerImpl implements LogoutSuccessHandler {
     @Override
-    public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+    public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) {
 
     }
 }

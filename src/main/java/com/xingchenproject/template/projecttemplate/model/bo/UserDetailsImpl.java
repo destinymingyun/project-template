@@ -11,6 +11,7 @@ import java.util.Collection;
 
 /**
  * 用户权限业务
+ * @author xingchen
  */
 @Data
 public class UserDetailsImpl implements UserDetails {

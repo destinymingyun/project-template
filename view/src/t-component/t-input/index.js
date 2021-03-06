@@ -1,6 +1,6 @@
 /**
  * 自主设计输入框
- * @deprecated
+ * @author xingchen
  * v1.0.8 新增<p/>
  * input:事件现在对外透明同原生用法 <p/>
  * name: 属性现在对外透明同原生用法 <p/>

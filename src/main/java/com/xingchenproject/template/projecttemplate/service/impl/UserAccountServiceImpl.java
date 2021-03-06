@@ -16,6 +16,8 @@ import java.util.Collection;
 
 /**
  * 用户帐户服务
+ *
+ * @author xingchen
  */
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
@@ -95,6 +97,7 @@ public class UserAccountServiceImpl implements UserAccountService {
 
     /**
      * 更改用户角色
+     *
      * @param userRoles 用户新角色集
      * @return 修改成功返回true，否则返回false
      */
@@ -114,6 +117,7 @@ public class UserAccountServiceImpl implements UserAccountService {
 
     /**
      * 删除用户全部角色
+     *
      * @param userId 用户id
      * @return 删除成功返回true，否则返回false
      */

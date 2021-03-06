@@ -1,5 +1,6 @@
 /**
  * vue路由
+ * @author xingchen
  **/
 import Vue from "vue";
 import VueRouter from "vue-router";

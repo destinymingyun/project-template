@@ -2,6 +2,7 @@ import FormValidate from "./form-validate";
 
 /**
  * 非空表单验证
+ * @author xingchen
  * 默认设置场景异常级
  **/
 class NotNullValidate extends FormValidate {

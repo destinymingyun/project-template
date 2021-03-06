@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 
 /**
  * 简单异步json响应体类
+ * @author xingchen
  */
 public class HttpServletJsonResponseWriter {
     /**

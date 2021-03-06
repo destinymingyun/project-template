@@ -3,10 +3,11 @@ package com.xingchenproject.template.projecttemplate.mapper;
 import com.xingchenproject.template.projecttemplate.model.po.UserAccount;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.security.access.method.P;
 
 /**
  * 用户帐户mapper类
+ *
+ * @author xingchen
  */
 @Mapper
 public interface UserAccountMapper {
@@ -16,7 +17,7 @@ public interface UserAccountMapper {
      *
      * @param userAccount 用户帐户类
      */
-    public void postUserAccount(UserAccount userAccount);
+    void postUserAccount(UserAccount userAccount);
 
     /**
      * 根据用户帐户提交用户信息
@@ -24,7 +25,7 @@ public interface UserAccountMapper {
      * @param account 用户帐户
      * @return 返回用户帐户信息
      */
-    public UserAccount getUserAccountByAccount(String account);
+    UserAccount getUserAccountByAccount(String account);
 
     /**
      * 根据用户账户和新密码修改用户信息
@@ -33,14 +34,15 @@ public interface UserAccountMapper {
      * @param newPassword 新密码
      * @return 返回数据库中受影响的行数
      */
-    public Integer updatePasswordByUserAccount(@Param("userAccount") UserAccount userAccount,
-                                               @Param("newPassword") String newPassword);
+    Integer updatePasswordByUserAccount(@Param("userAccount") UserAccount userAccount,
+                                        @Param("newPassword") String newPassword);
 
     /**
      * 根据用户id修改用户账户状态
-     * @param userId 用户id
+     *
+     * @param userId    用户id
      * @param newStatus 新状态
      * @return 返回数据库中受影响的行数
      */
-    public Integer updateStatusByUserId(@Param("userId") int userId, @Param("newStatus") boolean newStatus);
+    Integer updateStatusByUserId(@Param("userId") int userId, @Param("newStatus") boolean newStatus);
 }

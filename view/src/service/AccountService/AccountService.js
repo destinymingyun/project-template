@@ -1,5 +1,6 @@
 /**
  * 用户帐户接口
+ * @author xingchen
  */
 class AccountService {
     /**

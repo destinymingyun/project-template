@@ -13,12 +13,14 @@ import java.io.IOException;
 
 /**
  * 处理无权登录的情况
+ *
+ * @author xingchen
  */
 @Component
 public class AjaxAccessDeniedHandlerImpl implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-                       AccessDeniedException e) throws IOException, ServletException {
+                       AccessDeniedException e) throws IOException {
         ResponseJsonData responseJsonData = ResponseJsonData.builder()
                 .code(ResponseCode.ACCESS_DENIED)
                 .msg(ResponseCode.ACCESS_DENIED_NAME)

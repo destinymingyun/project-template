@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * token验证器
+ * @author xingchen
  */
 @Component
 public class TokenFilter extends OncePerRequestFilter {

@@ -3,6 +3,7 @@ import Axios from "axios";
 
 /**
  * 用户登录服务实现类1
+ * @author xingchen
  **/
 class AccountServiceImpl extends AccountService{
     login(userAccount) {
