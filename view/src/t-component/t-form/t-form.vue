@@ -1,6 +1,6 @@
 <template>
   <div class="t-form">
-    <form @submit.stop="submitForm" @reset="resetForm" method="post">
+    <form @submit.prevent="submitForm" @reset="resetForm" method="post" :enctype="enctype">
       <slot></slot>
     </form>
   </div>
@@ -24,7 +24,12 @@ export default {
     quickValidate: {
       type: Boolean,
       default: false,
-    }
+    },
+    //  表单数据编码
+    enctype: {
+      type: String,
+      default: "application/x-www-form-urlencoded",
+    },
   },
   methods: {
     /**
@@ -75,7 +80,6 @@ export default {
           return;
         }
       }
-      console.log(this.$children);
     },
   }
 };

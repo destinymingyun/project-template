@@ -1,15 +1,22 @@
 <template>
   <div class="t-tab-pane">
-    这是t-tab-pane组件
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
   name: "t-tab-pane",
+  props: {
+    //  tab标题
+    title: {
+      type: String,
+      value: "",
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 
 </style>

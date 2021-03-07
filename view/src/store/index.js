@@ -7,6 +7,7 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+// noinspection JSUnusedLocalSymbols
 const store = new Vuex.Store({
     state: {
 
@@ -17,7 +18,7 @@ const store = new Vuex.Store({
         },
     },
     getters: {
-        getToken: function() {
+        getToken: function(state) {
             return sessionStorage.getItem("token");
         },
     },

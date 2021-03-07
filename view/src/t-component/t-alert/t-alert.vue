@@ -1,11 +1,12 @@
 <template>
   <div :class="['t-alert', modeClass]">
-      <slot></slot>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 import Mode from "__protocol__/Mode";
+
 export default {
   name: "t-alert",
   props: {

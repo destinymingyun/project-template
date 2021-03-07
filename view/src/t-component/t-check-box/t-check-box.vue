@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     /**
-     * @param element: 碑点击事件触发的子组件自身
+     * @param element: 被点击事件触发的子组件自身
      **/
     updateValue(element) {
       let elementValue = element.$props.value;

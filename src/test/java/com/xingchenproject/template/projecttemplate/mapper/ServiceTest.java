@@ -35,7 +35,7 @@ public class ServiceTest {
         UserDetailsImpl userDetails = new UserDetailsImpl();
         UserAccount userAccount = new UserAccount();
         userAccount.setPassword("123456");
-        userAccount.setAccount("test2");
+        userAccount.setAccount("test3");
         userDetails.setUserAccount(userAccount);
         UserRole userRole = new UserRole();
         userRole.setRoleId(1);

@@ -7,6 +7,7 @@ import "__style__/config.less";
 import router from "__router__";
 import store from "./store";
 import "./config";
+import "./t-component/golab-compontent-config";
 
 new Vue({
     render: h => h(App),
