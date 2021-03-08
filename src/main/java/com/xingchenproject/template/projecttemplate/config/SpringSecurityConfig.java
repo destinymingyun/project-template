@@ -73,7 +73,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class)
                 //  配置不需要权限页面
                 .authorizeRequests()
-                .antMatchers("/api/user/loginTest")
+                .antMatchers("/**")
                 .permitAll()
                 .and()
                 //  配置登录

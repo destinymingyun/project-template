@@ -17,7 +17,7 @@ const urls = [
 /**
  * 请求拦截配置
  */
-Axios.interceptors.request.use(
+/*Axios.interceptors.request.use(
     function (config) {
         let ret = urls.some(value => value === config.url);
         if (!ret) {
@@ -30,7 +30,7 @@ Axios.interceptors.request.use(
         }
         return config;
     }
-);
+);*/
 
 /**
  * 放行拦截配置

@@ -57,7 +57,6 @@
         <t-menu-item title="菜单二" name="2"></t-menu-item>
         <t-menu-item title="菜单三" name="3"></t-menu-item>
       </t-menu>
-      <t-upload></t-upload>
       <t-tabs>
         <t-tab-panel title="第一页">这是tabs1</t-tab-panel>
       </t-tabs>
@@ -74,6 +73,7 @@
       </t-layout>
     </div>
     <t-button mode="success" @click="messageButton" long>message</t-button>
+    <t-upload><t-button type="submit" mode="primary">文件上传</t-button></t-upload>
   </div>
 </template>
 
